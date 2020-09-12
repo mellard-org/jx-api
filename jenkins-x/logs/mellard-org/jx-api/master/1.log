@@ -1,0 +1,62 @@
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599903490.766347,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mstep-git-source-mellard-org-jx-api-master-mds28-h8jkg[0m
+{"level":"info","ts":1599903590.276233,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/mellard-org/**-api.git @ v0.0.18 in path /workspace/source"}
+{"level":"warn","ts":1599903590.276328,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1599903590.318375,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmellard-org-jx-api-master-mds28-1[0m stage [32mrelease[0m and container [32mstep-changelog[0m
+Error: flag needs an argument: --rev
+
+
+Aliases:
+changelog, changes
+Examples:
+  # generate a changelog on the current source
+  ** step changelog
+  
+  # specify the version to use
+  ** step changelog --version 1.2.3
+  
+  # specify the version and a header template
+  ** step changelog --header-file docs/dev/changelog-header.md --version 1.2.3
+Options:
+      --build='': The Build number which is used to update the PipelineActivity. If not specified its defaulted from  the '$BUILD_NUMBER' environment variable
+  -c, --crd=false: Generate the CRD in the chart
+      --crd-yaml-file='release-crd.yaml': the name of the file to generate the Release CustomResourceDefinition YAML
+      --dir='': The directory of the Git repository. Defaults to the current working directory
+      --fail-if-no-commits=false: Do we want to fail the build if we don't find any commits to generate the changelog
+      --footer='': The changelog footer in markdown for the changelog. Can use go template expressions on the ReleaseSpec object: https://golang.org/pkg/text/template/
+      --footer-file='': The file name of the changelog footer in markdown for the changelog. Can use go template expressions on the ReleaseSpec object: https://golang.org/pkg/text/template/
+  -y, --generate-yaml=true: Generate the Release YAML in the local helm chart
+      --header='': The changelog header in markdown for the changelog. Can use go template expressions on the ReleaseSpec object: https://golang.org/pkg/text/template/
+      --header-file='': The file name of the changelog header in markdown for the changelog. Can use go template expressions on the ReleaseSpec object: https://golang.org/pkg/text/template/
+      --include-merge-commits=false: Include merge commits when generating the changelog
+      --no-dev-release=false: Disables the generation of Release CRDs in the development namespace to track releases being performed
+      --output-markdown='': The file to generate for the changelog output if not updating a Git provider release
+  -o, --overwrite=false: overwrites the Release CRD YAML file if it exists
+      --previous-date='': the previous date to find a revision in format 'MonthName dayNumber year'
+  -p, --previous-rev='': the previous tag revision
+      --release-yaml-file='release.yaml': the name of the file to generate the Release YAML
+  -r, --rev='': the current tag revision
+  -t, --templates-dir='': the directory containing the helm chart templates to generate the resources
+      --update-release=true: Should we update the release on the Git repository with the changelog
+  -v, --version='': The version to release
+Usage:
+  ** step changelog [flags] [options]
+Use "** options" for a list of global command-line options (applies to all commands).
+
+[31m
+Pipeline failed on stage 'release' : container 'step-changelog'. The execution of the pipeline has stopped.[0m
