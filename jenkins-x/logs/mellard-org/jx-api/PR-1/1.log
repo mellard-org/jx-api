@@ -1,0 +1,789 @@
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599903704.773362,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-git-source-mellard-org-jx-api-pr-1-pr-buil-bsgd6-xhp2l[0m
+{"level":"info","ts":1599903791.941244,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/mellard-org/**-api.git @ master in path /workspace/source"}
+{"level":"warn","ts":1599903791.9413211,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1599903791.99115,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9cec72607cc110192d8dfa5e3963830615853689,1:92586bb7bf529729356a5a8322776a862399ede3
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 92586bb7bf529729356a5a8322776a862399ede3: 9cec72607cc110192d8dfa5e3963830615853689:
+DEBUG: ran git fetch --unshallow origin 92586bb7bf529729356a5a8322776a862399ede3: 9cec72607cc110192d8dfa5e3963830615853689: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 9cec72607cc110192d8dfa5e3963830615853689
+DEBUG: ran git reset --hard 9cec72607cc110192d8dfa5e3963830615853689 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 92586bb7bf529729356a5a8322776a862399ede3
+DEBUG: ran git merge 92586bb7bf529729356a5a8322776a862399ede3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 9cec72607cc110192d8dfa5e3963830615853689..HEAD
+Merged SHA 3a34021a53c1fa15949fdba41b53a1ece3310ba2 with commit message 'Merge commit '92586bb7bf529729356a5a8322776a862399ede3'' into base branch master
+Merged SHA 92586bb7bf529729356a5a8322776a862399ede3 with commit message 'feat: Added in Azure Vault config to requirements' into base branch master
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-test[0m
+go: downloading k8s.io/apimachinery v0.16.5
+go: downloading github.com/cenkalti/backoff v2.2.1+incompatible
+go: downloading github.com/go-openapi/spec v0.19.7
+go: downloading k8s.io/client-go v0.16.5
+go: downloading github.com/ghodss/yaml v1.0.0
+go: downloading k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
+go: downloading github.com/pkg/errors v0.9.1
+go: extracting github.com/ghodss/yaml v1.0.0
+go: downloading github.com/spf13/cobra v1.0.0
+go: extracting github.com/cenkalti/backoff v2.2.1+incompatible
+go: downloading github.com/satori/go.uuid v1.2.1-0.20180103174451-36e9d2ebbde5
+go: extracting k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
+go: extracting github.com/go-openapi/spec v0.19.7
+go: downloading github.com/mattbaird/jsonpatch v0.0.0-20171005235357-81af80346b1a
+go: downloading github.com/go-openapi/jsonpointer v0.19.3
+go: extracting github.com/pkg/errors v0.9.1
+go: extracting github.com/go-openapi/jsonpointer v0.19.3
+go: downloading gopkg.in/yaml.v2 v2.2.8
+go: extracting github.com/spf13/cobra v1.0.0
+go: downloading github.com/stoewer/go-strcase v1.2.0
+go: extracting k8s.io/apimachinery v0.16.5
+go: extracting gopkg.in/yaml.v2 v2.2.8
+go: extracting github.com/satori/go.uuid v1.2.1-0.20180103174451-36e9d2ebbde5
+go: extracting github.com/mattbaird/jsonpatch v0.0.0-20171005235357-81af80346b1a
+go: downloading golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7
+go: downloading github.com/go-openapi/swag v0.19.5
+go: downloading github.com/go-openapi/jsonreference v0.19.2
+go: downloading github.com/spf13/pflag v1.0.5
+go: downloading k8s.io/klog v1.0.0
+go: downloading github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
+go: extracting github.com/go-openapi/jsonreference v0.19.2
+go: downloading k8s.io/api v0.16.5
+go: extracting github.com/spf13/pflag v1.0.5
+go: extracting github.com/stoewer/go-strcase v1.2.0
+go: downloading github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633
+go: extracting github.com/go-openapi/swag v0.19.5
+go: extracting k8s.io/klog v1.0.0
+go: downloading gopkg.in/inf.v0 v0.9.1
+go: extracting gopkg.in/inf.v0 v0.9.1
+go: extracting github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
+go: extracting github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633
+go: downloading github.com/vrischmann/envconfig v1.2.0
+go: extracting k8s.io/client-go v0.16.5
+go: downloading github.com/google/gofuzz v1.0.0
+go: downloading k8s.io/utils v0.0.0-20190801114015-581e00157fb1
+go: downloading github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e
+go: extracting github.com/vrischmann/envconfig v1.2.0
+go: extracting k8s.io/utils v0.0.0-20190801114015-581e00157fb1
+go: extracting golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7
+go: downloading github.com/evanphx/json-patch v4.2.0+incompatible
+go: extracting github.com/google/gofuzz v1.0.0
+go: downloading golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
+go: extracting github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e
+go: extracting github.com/evanphx/json-patch v4.2.0+incompatible
+go: downloading golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586
+go: downloading github.com/alecthomas/jsonschema v0.0.0-20190504002508-159cbd5dba26
+go: extracting k8s.io/api v0.16.5
+go: extracting github.com/alecthomas/jsonschema v0.0.0-20190504002508-159cbd5dba26
+go: extracting golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
+go: extracting golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586
+go: downloading golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+go: downloading github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
+go: downloading github.com/imdario/mergo v0.3.9
+go: downloading github.com/jenkins-x/**-logging v0.0.11
+go: downloading github.com/xeipuuv/gojsonschema v1.2.0
+go: downloading github.com/google/go-cmp v0.3.0
+go: downloading github.com/golang/protobuf v1.3.1
+go: downloading github.com/PuerkitoBio/purell v1.1.1
+go: extracting github.com/davecgh/go-spew v1.1.1
+go: extracting golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
+go: downloading github.com/modern-go/reflect2 v1.0.1
+go: extracting github.com/imdario/mergo v0.3.9
+go: downloading golang.org/x/text v0.3.2
+go: extracting github.com/google/go-cmp v0.3.0
+go: downloading sigs.k8s.io/yaml v1.1.0
+go: extracting github.com/modern-go/reflect2 v1.0.1
+go: downloading golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
+go: extracting github.com/jenkins-x/**-logging v0.0.11
+go: extracting golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
+go: downloading github.com/fatih/color v1.9.0
+go: extracting github.com/xeipuuv/gojsonschema v1.2.0
+go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+go: extracting github.com/PuerkitoBio/purell v1.1.1
+go: downloading github.com/json-iterator/go v1.1.7
+go: extracting github.com/golang/protobuf v1.3.1
+go: extracting sigs.k8s.io/yaml v1.1.0
+go: downloading github.com/jenkins-x/logrus-stackdriver-formatter v0.2.3
+go: extracting github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
+go: extracting github.com/fatih/color v1.9.0
+go: downloading github.com/hashicorp/golang-lru v0.5.1
+go: extracting github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+go: downloading github.com/sirupsen/logrus v1.6.0
+go: downloading github.com/mattn/go-isatty v0.0.11
+go: extracting github.com/sirupsen/logrus v1.6.0
+go: extracting github.com/json-iterator/go v1.1.7
+go: downloading github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+go: downloading github.com/rickar/props v0.0.0-20170718221555-0b06aeb2f037
+go: extracting golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+go: extracting github.com/jenkins-x/logrus-stackdriver-formatter v0.2.3
+go: downloading github.com/go-stack/stack v1.8.0
+go: extracting github.com/mattn/go-isatty v0.0.11
+go: extracting github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+go: downloading github.com/mattn/go-colorable v0.1.4
+go: downloading github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415
+go: extracting github.com/hashicorp/golang-lru v0.5.1
+go: extracting github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415
+go: downloading github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
+go: extracting github.com/rickar/props v0.0.0-20170718221555-0b06aeb2f037
+go: extracting github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
+go: extracting github.com/go-stack/stack v1.8.0
+go: extracting github.com/mattn/go-colorable v0.1.4
+go: extracting golang.org/x/text v0.3.2
+go: finding github.com/jenkins-x/**-logging v0.0.11
+go: finding github.com/cenkalti/backoff v2.2.1+incompatible
+go: finding github.com/pkg/errors v0.9.1
+go: finding github.com/ghodss/yaml v1.0.0
+go: finding github.com/spf13/cobra v1.0.0
+go: finding github.com/go-openapi/spec v0.19.7
+go: finding k8s.io/client-go v0.16.5
+go: finding github.com/satori/go.uuid v1.2.1-0.20180103174451-36e9d2ebbde5
+go: finding github.com/fatih/color v1.9.0
+go: finding github.com/jenkins-x/logrus-stackdriver-formatter v0.2.3
+go: finding k8s.io/apimachinery v0.16.5
+go: finding github.com/mattn/go-colorable v0.1.4
+go: finding github.com/golang/protobuf v1.3.1
+go: finding github.com/rickar/props v0.0.0-20170718221555-0b06aeb2f037
+go: finding github.com/mattn/go-isatty v0.0.11
+go: finding gopkg.in/yaml.v2 v2.2.8
+go: finding github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d
+go: finding github.com/sirupsen/logrus v1.6.0
+go: finding golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
+go: finding github.com/go-stack/stack v1.8.0
+go: finding golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
+go: finding github.com/alecthomas/jsonschema v0.0.0-20190504002508-159cbd5dba26
+go: finding github.com/spf13/pflag v1.0.5
+go: finding github.com/gogo/protobuf v1.2.2-0.20190723190241-65acae22fc9d
+go: finding github.com/stoewer/go-strcase v1.2.0
+go: finding k8s.io/utils v0.0.0-20190801114015-581e00157fb1
+go: finding github.com/go-openapi/jsonpointer v0.19.3
+go: finding github.com/mattbaird/jsonpatch v0.0.0-20171005235357-81af80346b1a
+go: finding golang.org/x/tools v0.0.0-20190821162956-65e3620a7ae7
+go: finding k8s.io/klog v1.0.0
+go: finding golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
+go: finding github.com/go-openapi/jsonreference v0.19.2
+go: finding github.com/xeipuuv/gojsonschema v1.2.0
+go: finding k8s.io/api v0.16.5
+go: finding github.com/google/gofuzz v1.0.0
+go: finding github.com/go-openapi/swag v0.19.5
+go: finding github.com/PuerkitoBio/purell v1.1.1
+go: finding k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
+go: finding github.com/json-iterator/go v1.1.7
+go: finding github.com/modern-go/reflect2 v1.0.1
+go: finding github.com/evanphx/json-patch v4.2.0+incompatible
+go: finding github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633
+go: finding github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415
+go: finding github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+go: finding github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+go: finding github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e
+go: finding github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
+go: finding golang.org/x/text v0.3.2
+go: finding gopkg.in/inf.v0 v0.9.1
+go: finding sigs.k8s.io/yaml v1.1.0
+go: finding github.com/imdario/mergo v0.3.9
+go: finding github.com/hashicorp/golang-lru v0.5.1
+go: finding github.com/davecgh/go-spew v1.1.1
+go: finding github.com/google/go-cmp v0.3.0
+go: finding golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586
+go: finding github.com/vrischmann/envconfig v1.2.0
+go: finding golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
+GO111MODULE=on GO15VENDOREXPERIMENT=1 go build ./...
+GO111MODULE=on GO15VENDOREXPERIMENT=1 go test -coverprofile=coverage.out ./...
+go: downloading github.com/stretchr/testify v1.6.1
+go: extracting github.com/stretchr/testify v1.6.1
+go: downloading gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: extracting github.com/pmezard/go-difflib v1.0.0
+go: extracting gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+go: finding github.com/stretchr/testify v1.6.1
+go: finding github.com/pmezard/go-difflib v1.0.0
+go: finding gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+?   	github.com/jenkins-x/**-api/cmd/codegen	[no test files]
+?   	github.com/jenkins-x/**-api/cmd/codegen/app	[no test files]
+?   	github.com/jenkins-x/**-api/cmd/codegen/generator	[no test files]
+ok  	github.com/jenkins-x/**-api/cmd/codegen/util	0.010s	coverage: 4.2% of statements
+?   	github.com/jenkins-x/**-api/pkg/apis/jenkins.io	[no test files]
+ok  	github.com/jenkins-x/**-api/pkg/apis/jenkins.io/v1	0.030s	coverage: 0.7% of statements
+?   	github.com/jenkins-x/**-api/pkg/client/clientset/versioned	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/clientset/versioned/fake	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/clientset/versioned/scheme	[no test files]
+ok  	github.com/jenkins-x/**-api/pkg/client/clientset/versioned/typed/jenkins.io/v1	0.049s	coverage: 37.2% of statements
+?   	github.com/jenkins-x/**-api/pkg/client/clientset/versioned/typed/jenkins.io/v1/fake	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/informers/externalversions	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/informers/externalversions/internalinterfaces	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/informers/externalversions/jenkins.io	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/informers/externalversions/jenkins.io/v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/listers/jenkins.io/v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/all	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/core	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_batch_v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_core_v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_rbac_v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_meta_v1	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_resource_unversioned	[no test files]
+?   	github.com/jenkins-x/**-api/pkg/cloud	[no test files]
+ok  	github.com/jenkins-x/**-api/pkg/config	0.054s	coverage: 29.6% of statements
+ok  	github.com/jenkins-x/**-api/pkg/util	0.216s	coverage: 41.4% of statements
+ok  	github.com/jenkins-x/**-api/pkg/util/json	0.011s	coverage: 72.7% of statements
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-lint[0m
+Installing GolangCI-Lint
+golangci/golangci-lint info checking GitHub for tag 'v1.27.0'
+golangci/golangci-lint info found version: 1.27.0 for v1.27.0/linux/amd64
+golangci/golangci-lint info installed /workspace/go/bin/golangci-lint
+level=info msg="[config_reader] Config search paths: [./ /workspace/source /workspace /]"
+level=info msg="[config_reader] Used config file .golangci.yml"
+level=info msg="[lintersdb] Active 27 linters: [asciicheck bodyclose deadcode depguard dogsled dupl errcheck funlen goconst gofmt goimports goprintffuncname gosec gosimple ineffassign interfacer misspell nakedret rowserrcheck staticcheck structcheck testpackage typecheck unconvert unparam unused varcheck]"
+level=info msg="[loader] Using build tags: [build]"
+level=info msg="[loader] Go packages loading at mode 575 (types_sizes|imports|name|exports_file|files|compiled_files|deps) took 4.512437124s"
+level=info msg="[runner/filename_unadjuster] Pre-built 0 adjustments in 101.746342ms"
+level=info msg="[linters context/goanalysis] analyzers took 5m29.874722375s with top 10 stages: buildir: 2m47.764221791s, buildssa: 40.445123308s, dupl: 20.525144195s, goimports: 17.220615272s, gofmt: 11.522622726s, gosec: 6.796643487s, unparam: 5.643780954s, misspell: 5.525456s, interfacer: 5.186098954s, ineffassign: 4.224691114s"
+level=info msg="[linters context/goanalysis] analyzers took 9.135315796s with top 10 stages: buildir: 8.581440258s, U1000: 553.875538ms"
+level=info msg="[runner] Issues before processing: 538, after processing: 0"
+level=info msg="[runner] Processors filtering stat (out/in): autogenerated_exclude: 84/538, path_prettifier: 538/538, skip_files: 538/538, exclude-rules: 43/58, filename_unadjuster: 538/538, identifier_marker: 84/84, exclude: 58/84, nolint: 0/43, cgo: 538/538, skip_dirs: 538/538"
+level=info msg="[runner] processing took 29.50563ms with stages: nolint: 11.229849ms, exclude: 5.769225ms, cgo: 5.212823ms, identifier_marker: 2.718312ms, skip_dirs: 1.603007ms, autogenerated_exclude: 1.534807ms, path_prettifier: 1.129405ms, exclude-rules: 194.801µs, filename_unadjuster: 108.701µs, max_same_issues: 1.8µs, uniq_by_line: 800ns, max_per_file_from_linter: 500ns, diff: 400ns, source_code: 400ns, skip_files: 300ns, max_from_linter: 300ns, path_shortener: 200ns"
+level=info msg="[runner] linters took 2m8.182270469s with stages: goanalysis_metalinter: 1m59.745284854s, unused: 8.406738382s"
+level=info msg="File cache stats: 197 entries of total size 1.6MiB"
+level=info msg="Memory: 1144 samples, avg is 255.6MB, max is 342.1MB"
+level=info msg="Execution took 2m12.818723233s"
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-mk-jxapi-project-dir[0m
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-copy-jxapi-project-to-gopath[0m
+'./.helmignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.helmignore'
+'./go.sum' -> '/workspace/go/src/github.com/jenkins-x/**-api/./go.sum'
+'./coverage.out' -> '/workspace/go/src/github.com/jenkins-x/**-api/./coverage.out'
+'./custom-boilerplate.go.txt' -> '/workspace/go/src/github.com/jenkins-x/**-api/./custom-boilerplate.go.txt'
+'./changelog.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./changelog.sh'
+'./Makefile.codegen' -> '/workspace/go/src/github.com/jenkins-x/**-api/./Makefile.codegen'
+'./jenkins-x.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./jenkins-x.yml'
+'./.git/refs/heads/master' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/heads/master'
+'./.git/refs/heads' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/heads'
+'./.git/refs/tags' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/tags'
+'./.git/refs/remotes/origin/master' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/remotes/origin/master'
+'./.git/refs/remotes/origin' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/remotes/origin'
+'./.git/refs/remotes' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs/remotes'
+'./.git/refs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/refs'
+'./.git/HEAD' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/HEAD'
+'./.git/info/exclude' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/info/exclude'
+'./.git/info' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/info'
+'./.git/index' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/index'
+'./.git/hooks/applypatch-msg.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/applypatch-msg.sample'
+'./.git/hooks/pre-merge-commit.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-merge-commit.sample'
+'./.git/hooks/pre-commit.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-commit.sample'
+'./.git/hooks/pre-push.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-push.sample'
+'./.git/hooks/post-update.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/post-update.sample'
+'./.git/hooks/commit-msg.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/commit-msg.sample'
+'./.git/hooks/pre-rebase.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-rebase.sample'
+'./.git/hooks/pre-applypatch.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-applypatch.sample'
+'./.git/hooks/prepare-commit-msg.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/prepare-commit-msg.sample'
+'./.git/hooks/update.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/update.sample'
+'./.git/hooks/pre-receive.sample' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks/pre-receive.sample'
+'./.git/hooks' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/hooks'
+'./.git/objects/info' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/info'
+'./.git/objects/98/fc1a4ad15d1d82b51f10b52ed04756bae500e2' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/98/fc1a4ad15d1d82b51f10b52ed04756bae500e2'
+'./.git/objects/98' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/98'
+'./.git/objects/3a/34021a53c1fa15949fdba41b53a1ece3310ba2' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/3a/34021a53c1fa15949fdba41b53a1ece3310ba2'
+'./.git/objects/3a' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/3a'
+'./.git/objects/pack/pack-aeb0d8b9593face5bb2a743a0ecde8a236fd53b7.pack' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/pack/pack-aeb0d8b9593face5bb2a743a0ecde8a236fd53b7.pack'
+'./.git/objects/pack/pack-9c320e91ed84a486badf5a0ef3d3cd539105961c.idx' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/pack/pack-9c320e91ed84a486badf5a0ef3d3cd539105961c.idx'
+'./.git/objects/pack/pack-aeb0d8b9593face5bb2a743a0ecde8a236fd53b7.idx' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/pack/pack-aeb0d8b9593face5bb2a743a0ecde8a236fd53b7.idx'
+'./.git/objects/pack/pack-9c320e91ed84a486badf5a0ef3d3cd539105961c.pack' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/pack/pack-9c320e91ed84a486badf5a0ef3d3cd539105961c.pack'
+'./.git/objects/pack' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects/pack'
+'./.git/objects' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/objects'
+'./.git/ORIG_HEAD' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/ORIG_HEAD'
+'./.git/logs/refs/heads/master' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs/heads/master'
+'./.git/logs/refs/heads' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs/heads'
+'./.git/logs/refs/remotes/origin/master' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs/remotes/origin/master'
+'./.git/logs/refs/remotes/origin' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs/remotes/origin'
+'./.git/logs/refs/remotes' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs/remotes'
+'./.git/logs/refs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/refs'
+'./.git/logs/HEAD' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs/HEAD'
+'./.git/logs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/logs'
+'./.git/description' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/description'
+'./.git/config' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/config'
+'./.git/branches' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/branches'
+'./.git/FETCH_HEAD' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git/FETCH_HEAD'
+'./.git' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.git'
+'./README.md' -> '/workspace/go/src/github.com/jenkins-x/**-api/./README.md'
+'./skaffold.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./skaffold.yaml'
+'./.golangci.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.golangci.yml'
+'./hack/linter.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./hack/linter.sh'
+'./hack/generate.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./hack/generate.sh'
+'./hack/install_golint.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./hack/install_golint.sh'
+'./hack/check-**.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./hack/check-**.sh'
+'./hack' -> '/workspace/go/src/github.com/jenkins-x/**-api/./hack'
+'./go.mod' -> '/workspace/go/src/github.com/jenkins-x/**-api/./go.mod'
+'./cmd/codegen/generator/docs.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/generator/docs.go'
+'./cmd/codegen/generator/open_api.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/generator/open_api.go'
+'./cmd/codegen/generator/common.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/generator/common.go'
+'./cmd/codegen/generator/client_set.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/generator/client_set.go'
+'./cmd/codegen/generator' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/generator'
+'./cmd/codegen/app/root.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app/root.go'
+'./cmd/codegen/app/generate_options.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app/generate_options.go'
+'./cmd/codegen/app/generate_docs.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app/generate_docs.go'
+'./cmd/codegen/app/generate_openapi.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app/generate_openapi.go'
+'./cmd/codegen/app/generate_clientset.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app/generate_clientset.go'
+'./cmd/codegen/app' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/app'
+'./cmd/codegen/codegen.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/codegen.go'
+'./cmd/codegen/util/strings.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/strings.go'
+'./cmd/codegen/util/commands.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/commands.go'
+'./cmd/codegen/util/files.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/files.go'
+'./cmd/codegen/util/go.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/go.go'
+'./cmd/codegen/util/cli.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/cli.go'
+'./cmd/codegen/util/go_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util/go_test.go'
+'./cmd/codegen/util' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen/util'
+'./cmd/codegen' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd/codegen'
+'./cmd' -> '/workspace/go/src/github.com/jenkins-x/**-api/./cmd'
+'./Makefile' -> '/workspace/go/src/github.com/jenkins-x/**-api/./Makefile'
+'./OWNERS' -> '/workspace/go/src/github.com/jenkins-x/**-api/./OWNERS'
+'./watch.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./watch.sh'
+'./.dependabot/config.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.dependabot/config.yml'
+'./.dependabot' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.dependabot'
+'./charts/**-api/.helmignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/.helmignore'
+'./charts/**-api/Chart.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/Chart.yaml'
+'./charts/**-api/README.md' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/README.md'
+'./charts/**-api/Makefile' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/Makefile'
+'./charts/**-api/templates/canary.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/canary.yaml'
+'./charts/**-api/templates/ingress.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/ingress.yaml'
+'./charts/**-api/templates/_helpers.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/_helpers.tpl'
+'./charts/**-api/templates/hpa.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/hpa.yaml'
+'./charts/**-api/templates/deployment.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/deployment.yaml'
+'./charts/**-api/templates/ksvc.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/ksvc.yaml'
+'./charts/**-api/templates/service.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/service.yaml'
+'./charts/**-api/templates/NOTES.txt' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates/NOTES.txt'
+'./charts/**-api/templates' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/templates'
+'./charts/**-api/values.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api/values.yaml'
+'./charts/**-api' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/**-api'
+'./charts/preview/Chart.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/preview/Chart.yaml'
+'./charts/preview/requirements.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/preview/requirements.yaml'
+'./charts/preview/Makefile' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/preview/Makefile'
+'./charts/preview/values.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/preview/values.yaml'
+'./charts/preview' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts/preview'
+'./charts' -> '/workspace/go/src/github.com/jenkins-x/**-api/./charts'
+'./LICENSE' -> '/workspace/go/src/github.com/jenkins-x/**-api/./LICENSE'
+'./.gitignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.gitignore'
+'./pkg/client/openapi/all/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/all/openapi_generated.go'
+'./pkg/client/openapi/all' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/all'
+'./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned'
+'./pkg/client/openapi/k8s_io_api_core_v1/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_core_v1/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_api_core_v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_core_v1'
+'./pkg/client/openapi/k8s_io_api_batch_v1/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_batch_v1/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_api_batch_v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_batch_v1'
+'./pkg/client/openapi/schema_writer_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/schema_writer_generated.go'
+'./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned'
+'./pkg/client/openapi/k8s_io_apimachinery_meta_v1/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_meta_v1/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_apimachinery_meta_v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_apimachinery_meta_v1'
+'./pkg/client/openapi/core/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/core/openapi_generated.go'
+'./pkg/client/openapi/core' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/core'
+'./pkg/client/openapi/k8s_io_api_rbac_v1/openapi_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_rbac_v1/openapi_generated.go'
+'./pkg/client/openapi/k8s_io_api_rbac_v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi/k8s_io_api_rbac_v1'
+'./pkg/client/openapi' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/openapi'
+'./pkg/client/clientset/versioned/clientset.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/clientset.go'
+'./pkg/client/clientset/versioned/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/doc.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/team.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/team.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/jenkins.io_client.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/jenkins.io_client.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/release.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/release.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/user.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/user.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/doc.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/app_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/app_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/scheduler.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/scheduler.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/app.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/app.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/testutil.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/testutil.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepositorygroup.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepositorygroup.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/doc.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_scheduler.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_scheduler.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_jenkins.io_client.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_jenkins.io_client.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion_test.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepositorygroup.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepositorygroup.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/generated_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/generated_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion.go'
+'./pkg/client/clientset/versioned/typed/jenkins.io/v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io/v1'
+'./pkg/client/clientset/versioned/typed/jenkins.io' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed/jenkins.io'
+'./pkg/client/clientset/versioned/typed' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/typed'
+'./pkg/client/clientset/versioned/scheme/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/scheme/doc.go'
+'./pkg/client/clientset/versioned/scheme/register.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/scheme/register.go'
+'./pkg/client/clientset/versioned/scheme' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/scheme'
+'./pkg/client/clientset/versioned/fake/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/fake/doc.go'
+'./pkg/client/clientset/versioned/fake/clientset_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/fake/clientset_generated.go'
+'./pkg/client/clientset/versioned/fake/register.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/fake/register.go'
+'./pkg/client/clientset/versioned/fake' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned/fake'
+'./pkg/client/clientset/versioned' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset/versioned'
+'./pkg/client/clientset' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/clientset'
+'./pkg/client/listers/jenkins.io/v1/team.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/team.go'
+'./pkg/client/listers/jenkins.io/v1/environment.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/environment.go'
+'./pkg/client/listers/jenkins.io/v1/extension.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/extension.go'
+'./pkg/client/listers/jenkins.io/v1/expansion_generated.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/expansion_generated.go'
+'./pkg/client/listers/jenkins.io/v1/release.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/release.go'
+'./pkg/client/listers/jenkins.io/v1/user.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/user.go'
+'./pkg/client/listers/jenkins.io/v1/environmentrolebinding.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/environmentrolebinding.go'
+'./pkg/client/listers/jenkins.io/v1/sourcerepository.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/sourcerepository.go'
+'./pkg/client/listers/jenkins.io/v1/pipelinestructure.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/pipelinestructure.go'
+'./pkg/client/listers/jenkins.io/v1/commitstatus.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/commitstatus.go'
+'./pkg/client/listers/jenkins.io/v1/pipelineactivity.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/pipelineactivity.go'
+'./pkg/client/listers/jenkins.io/v1/scheduler.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/scheduler.go'
+'./pkg/client/listers/jenkins.io/v1/plugin.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/plugin.go'
+'./pkg/client/listers/jenkins.io/v1/fact.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/fact.go'
+'./pkg/client/listers/jenkins.io/v1/gitservice.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/gitservice.go'
+'./pkg/client/listers/jenkins.io/v1/workflow.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/workflow.go'
+'./pkg/client/listers/jenkins.io/v1/app.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/app.go'
+'./pkg/client/listers/jenkins.io/v1/buildpack.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/buildpack.go'
+'./pkg/client/listers/jenkins.io/v1/sourcerepositorygroup.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1/sourcerepositorygroup.go'
+'./pkg/client/listers/jenkins.io/v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io/v1'
+'./pkg/client/listers/jenkins.io' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers/jenkins.io'
+'./pkg/client/listers' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/listers'
+'./pkg/client/informers/externalversions/internalinterfaces/factory_interfaces.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/internalinterfaces/factory_interfaces.go'
+'./pkg/client/informers/externalversions/internalinterfaces' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/internalinterfaces'
+'./pkg/client/informers/externalversions/jenkins.io/v1/team.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/team.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/environment.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/environment.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/extension.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/extension.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/release.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/release.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/user.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/user.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/environmentrolebinding.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/environmentrolebinding.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepository.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepository.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/pipelinestructure.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/pipelinestructure.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/commitstatus.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/commitstatus.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/pipelineactivity.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/pipelineactivity.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/scheduler.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/scheduler.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/plugin.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/plugin.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/fact.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/fact.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/gitservice.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/gitservice.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/workflow.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/workflow.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/app.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/app.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/buildpack.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/buildpack.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepositorygroup.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepositorygroup.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1/interface.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1/interface.go'
+'./pkg/client/informers/externalversions/jenkins.io/v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/v1'
+'./pkg/client/informers/externalversions/jenkins.io/interface.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io/interface.go'
+'./pkg/client/informers/externalversions/jenkins.io' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/jenkins.io'
+'./pkg/client/informers/externalversions/generic.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/generic.go'
+'./pkg/client/informers/externalversions/factory.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions/factory.go'
+'./pkg/client/informers/externalversions' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers/externalversions'
+'./pkg/client/informers' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client/informers'
+'./pkg/client' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/client'
+'./pkg/cloud/constants.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/cloud/constants.go'
+'./pkg/cloud' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/cloud'
+'./pkg/util/maps.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/maps.go'
+'./pkg/util/urls_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/urls_test.go'
+'./pkg/util/validation.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/validation.go'
+'./pkg/util/dirs.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/dirs.go'
+'./pkg/util/files_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/files_test.go'
+'./pkg/util/commands.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/commands.go'
+'./pkg/util/test_data/scripts/fail_iterator.sh' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/test_data/scripts/fail_iterator.sh'
+'./pkg/util/test_data/scripts/fail_iterator.bat' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/test_data/scripts/fail_iterator.bat'
+'./pkg/util/test_data/scripts' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/test_data/scripts'
+'./pkg/util/test_data' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/test_data'
+'./pkg/util/files.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/files.go'
+'./pkg/util/json/patch.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/json/patch.go'
+'./pkg/util/json/patch_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/json/patch_test.go'
+'./pkg/util/json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/json'
+'./pkg/util/commands_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/commands_test.go'
+'./pkg/util/urls.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util/urls.go'
+'./pkg/util' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/util'
+'./pkg/config/test_data/**-apps.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-apps.yml'
+'./pkg/config/test_data/**-apps-phase-good/**-apps.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-apps-phase-good/**-apps.yml'
+'./pkg/config/test_data/**-apps-phase-good' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-apps-phase-good'
+'./pkg/config/test_data/git_public_nil_git_private_false.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/git_public_nil_git_private_false.yaml'
+'./pkg/config/test_data/git_public_nil_git_private_true.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/git_public_nil_git_private_true.yaml'
+'./pkg/config/test_data/git_public_true_git_private_nil.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/git_public_true_git_private_nil.yaml'
+'./pkg/config/test_data/**-requirements-syntax-error/**-requirements.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-requirements-syntax-error/**-requirements.yml'
+'./pkg/config/test_data/**-requirements-syntax-error' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-requirements-syntax-error'
+'./pkg/config/test_data/git_public_false_git_private_nil.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/git_public_false_git_private_nil.yaml'
+'./pkg/config/test_data/git_public_true_git_private_true.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/git_public_true_git_private_true.yaml'
+'./pkg/config/test_data/build_pack_library.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/build_pack_library.yaml'
+'./pkg/config/test_data/**-apps-phase-bad/**-apps.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-apps-phase-bad/**-apps.yml'
+'./pkg/config/test_data/**-apps-phase-bad' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-apps-phase-bad'
+'./pkg/config/test_data/**-requirements.yml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data/**-requirements.yml'
+'./pkg/config/test_data' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/test_data'
+'./pkg/config/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/doc.go'
+'./pkg/config/install_requirements.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/install_requirements.go'
+'./pkg/config/install_applications_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/install_applications_test.go'
+'./pkg/config/zz_generated.deepcopy.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/zz_generated.deepcopy.go'
+'./pkg/config/install_applications.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/install_applications.go'
+'./pkg/config/install_requirements_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config/install_requirements_test.go'
+'./pkg/config' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/config'
+'./pkg/apis/jenkins.io/v1/types_pipelinestructure.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_pipelinestructure.go'
+'./pkg/apis/jenkins.io/v1/types_teams.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_teams.go'
+'./pkg/apis/jenkins.io/v1/types_workflow.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_workflow.go'
+'./pkg/apis/jenkins.io/v1/types_release.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_release.go'
+'./pkg/apis/jenkins.io/v1/types_extensions.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_extensions.go'
+'./pkg/apis/jenkins.io/v1/test_data/environment/git_public_nil_git_private_false.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment/git_public_nil_git_private_false.json'
+'./pkg/apis/jenkins.io/v1/test_data/environment/git_public_nil_git_private_true.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment/git_public_nil_git_private_true.json'
+'./pkg/apis/jenkins.io/v1/test_data/environment/git_public_true_git_private_true.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment/git_public_true_git_private_true.json'
+'./pkg/apis/jenkins.io/v1/test_data/environment/git_public_false_git_private_nil.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment/git_public_false_git_private_nil.json'
+'./pkg/apis/jenkins.io/v1/test_data/environment/git_public_true_git_private_nil.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment/git_public_true_git_private_nil.json'
+'./pkg/apis/jenkins.io/v1/test_data/environment' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data/environment'
+'./pkg/apis/jenkins.io/v1/test_data' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/test_data'
+'./pkg/apis/jenkins.io/v1/doc.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/doc.go'
+'./pkg/apis/jenkins.io/v1/types_environment.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_environment.go'
+'./pkg/apis/jenkins.io/v1/zz_generated.deepcopy.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/zz_generated.deepcopy.go'
+'./pkg/apis/jenkins.io/v1/types_fact.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_fact.go'
+'./pkg/apis/jenkins.io/v1/types_environment_test.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_environment_test.go'
+'./pkg/apis/jenkins.io/v1/types_pipeline.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_pipeline.go'
+'./pkg/apis/jenkins.io/v1/types_users.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_users.go'
+'./pkg/apis/jenkins.io/v1/types_pipeline_scheduler.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_pipeline_scheduler.go'
+'./pkg/apis/jenkins.io/v1/register.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/register.go'
+'./pkg/apis/jenkins.io/v1/types_buildpack.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1/types_buildpack.go'
+'./pkg/apis/jenkins.io/v1' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/v1'
+'./pkg/apis/jenkins.io/register.go' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io/register.go'
+'./pkg/apis/jenkins.io' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis/jenkins.io'
+'./pkg/apis' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg/apis'
+'./pkg' -> '/workspace/go/src/github.com/jenkins-x/**-api/./pkg'
+'./docs/configdocs/config.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/config.json'
+'./docs/configdocs/templates/pkg.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/templates/pkg.tpl'
+'./docs/configdocs/templates/type.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/templates/type.tpl'
+'./docs/configdocs/templates/members.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/templates/members.tpl'
+'./docs/configdocs/templates/.gitignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/templates/.gitignore'
+'./docs/configdocs/templates' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs/templates'
+'./docs/configdocs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/configdocs'
+'./docs/apidocs/static/stylesheet.css' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static/stylesheet.css'
+'./docs/apidocs/static' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static'
+'./docs/apidocs/openapi-spec/openapiv2.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/openapi-spec/openapiv2.yaml'
+'./docs/apidocs/openapi-spec/openapiv2.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/openapi-spec/openapiv2.json'
+'./docs/apidocs/openapi-spec' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/openapi-spec'
+'./docs/apidocs/config.yaml' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/config.yaml'
+'./docs/apidocs/static_includes/_overview.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/_overview.html'
+'./docs/apidocs/static_includes/pipelines.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/pipelines.html'
+'./docs/apidocs/static_includes/_definitions.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/_definitions.html'
+'./docs/apidocs/static_includes/apps.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/apps.html'
+'./docs/apidocs/static_includes/user_management.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/user_management.html'
+'./docs/apidocs/static_includes/_oldversions.html' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes/_oldversions.html'
+'./docs/apidocs/static_includes' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs/static_includes'
+'./docs/apidocs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/apidocs'
+'./docs/refdocs/config.json' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/config.json'
+'./docs/refdocs/templates/pkg.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/templates/pkg.tpl'
+'./docs/refdocs/templates/type.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/templates/type.tpl'
+'./docs/refdocs/templates/members.tpl' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/templates/members.tpl'
+'./docs/refdocs/templates/.gitignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/templates/.gitignore'
+'./docs/refdocs/templates' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs/templates'
+'./docs/refdocs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs/refdocs'
+'./docs' -> '/workspace/go/src/github.com/jenkins-x/**-api/./docs'
+'./.dockerignore' -> '/workspace/go/src/github.com/jenkins-x/**-api/./.dockerignore'
+'./OWNERS_ALIASES' -> '/workspace/go/src/github.com/jenkins-x/**-api/./OWNERS_ALIASES'
+'./Dockerfile' -> '/workspace/go/src/github.com/jenkins-x/**-api/./Dockerfile'
+'.' -> '/workspace/go/src/github.com/jenkins-x/**-api/.'
+
+Showing logs for build [32mmellard-org-jx-api-pr-1-pr-buil-bsgd6-1[0m stage [32mci[0m and container [32mstep-verify-codegen[0m
+Running validation scripts...
+RUN make verify-generation-complete
+# Making sure repo has no outstanding changes
+git stash
+No local changes to save
+CGO_ENABLED= GO111MODULE=on GO15VENDOREXPERIMENT=1 go build  -o build/codegen cmd/codegen/codegen.go
+GO111MODULE=on GO15VENDOREXPERIMENT=1 go get github.com/petergtz/pegomock/...@v2.7.0
+go: downloading github.com/petergtz/pegomock v2.7.0+incompatible
+go: extracting github.com/petergtz/pegomock v2.7.0+incompatible
+go: downloading github.com/onsi/gomega v1.5.0
+go: downloading gopkg.in/alecthomas/kingpin.v2 v2.2.6
+go: extracting github.com/onsi/gomega v1.5.0
+go: extracting gopkg.in/alecthomas/kingpin.v2 v2.2.6
+go: downloading github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
+go: downloading github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf
+go: extracting github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
+go: extracting github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf
+go: finding github.com/petergtz/pegomock v2.7.0
+go: finding github.com/onsi/gomega v1.5.0
+go: finding gopkg.in/alecthomas/kingpin.v2 v2.2.6
+go: finding github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc
+go: finding github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf
+Generating Mocks using pegomock
+GO111MODULE=on GO15VENDOREXPERIMENT=1 go generate ./...
+GO111MODULE=off go get golang.org/x/tools/cmd/goimports
+Formatting the imports...
+goimports -w ./cmd/codegen/generator/docs.go ./cmd/codegen/generator/open_api.go ./cmd/codegen/generator/common.go ./cmd/codegen/generator/client_set.go ./cmd/codegen/app/root.go ./cmd/codegen/app/generate_options.go ./cmd/codegen/app/generate_docs.go ./cmd/codegen/app/generate_openapi.go ./cmd/codegen/app/generate_clientset.go ./cmd/codegen/codegen.go ./cmd/codegen/util/strings.go ./cmd/codegen/util/commands.go ./cmd/codegen/util/files.go ./cmd/codegen/util/go.go ./cmd/codegen/util/cli.go ./cmd/codegen/util/go_test.go ./pkg/client/openapi/all/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_api_core_v1/openapi_generated.go ./pkg/client/openapi/k8s_io_api_batch_v1/openapi_generated.go ./pkg/client/openapi/schema_writer_generated.go ./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_meta_v1/openapi_generated.go ./pkg/client/openapi/core/openapi_generated.go ./pkg/client/openapi/k8s_io_api_rbac_v1/openapi_generated.go ./pkg/client/clientset/versioned/clientset.go ./pkg/client/clientset/versioned/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion_test.go ./pkg/client/clientset/version
+ed/typed/jenkins.io/v1/commitstatus_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/testutil.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/generated_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion.go ./pkg/client/clientset/versioned/scheme/doc.go ./pkg/client/clientset/versioned/scheme/register.go ./pkg/client/clientset/versioned/fak
+e/doc.go ./pkg/client/clientset/versioned/fake/clientset_generated.go ./pkg/client/clientset/versioned/fake/register.go ./pkg/client/listers/jenkins.io/v1/team.go ./pkg/client/listers/jenkins.io/v1/environment.go ./pkg/client/listers/jenkins.io/v1/extension.go ./pkg/client/listers/jenkins.io/v1/expansion_generated.go ./pkg/client/listers/jenkins.io/v1/release.go ./pkg/client/listers/jenkins.io/v1/user.go ./pkg/client/listers/jenkins.io/v1/environmentrolebinding.go ./pkg/client/listers/jenkins.io/v1/sourcerepository.go ./pkg/client/listers/jenkins.io/v1/pipelinestructure.go ./pkg/client/listers/jenkins.io/v1/commitstatus.go ./pkg/client/listers/jenkins.io/v1/pipelineactivity.go ./pkg/client/listers/jenkins.io/v1/scheduler.go ./pkg/client/listers/jenkins.io/v1/plugin.go ./pkg/client/listers/jenkins.io/v1/fact.go ./pkg/client/listers/jenkins.io/v1/gitservice.go ./pkg/client/listers/jenkins.io/v1/workflow.go ./pkg/client/listers/jenkins.io/v1/app.go ./pkg/client/listers/jenkins.io/v1/buildpack.go ./pkg/client/listers/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/internalinterfaces/factory_interfaces.go ./pkg/client/informers/externalversions/jenkins.io/v1/team.go ./pkg/client/informers/externalversions/jenkins.io/v1/environment.go ./pkg/client/informers/externalversions/jenkins.io/v1/extension.go ./pkg/client/informers/externalversions/jenkins.io/v1/release.go ./pkg/client/informers/externalversions/jenkins.io/v1/user.go ./pkg/client/informers/externalversions/jenkins.io/v1/environmentrolebinding.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepository.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelinestructure.go ./pkg/client/informers/externalversions/jenkins.io/v1/commitstatus.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelineactivity.go ./pkg/client/informers/externalversions/jenkins.io/v1/scheduler.go ./pkg/client/informers/externalversions/jenkins.io/v1/plugin.go ./pkg/client/informers/externalversions/jenkins.io/v1/fact.go ./pkg/client/informers/externalversions/jenkins.io/v1/gitservice.go ./pkg/client/informers/externalversions/jenkins.io/v1/workflow.go ./pkg/client/informers/externalversions/jenkins.io/v1/app.go ./pkg/client/informers/externalversions/jenkins.io/v1/buildpack.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/jenkins.io/v1/interface.go ./pkg/client/informers/externalversions/jenkins.io/interface.go ./pkg/client/informers/externalversions/generic.go ./pkg/client/informers/externalversions/factory.go ./pkg/cloud/constants.go ./pkg/util/maps.go ./pkg/util/urls_test.go ./pkg/util/validation.go ./pkg/util/dirs.go ./pkg/util/files_test.go ./pkg/util/commands.go ./pkg/util/files.go ./pkg/util/json/patch.go ./pkg/util/json/patch_test.go ./pkg/util/commands_test.go ./pkg/util/urls.go ./pkg/config/doc.go ./pkg/config/install_requirements.go ./pkg/config/install_applications_test.go ./pkg/config/zz_generated.deepcopy.go ./pkg/config/install_applications.go ./pkg/config/install_requirements_test.go ./pkg/apis/jenkins.io/v1/types_pipelinestructure.go ./pkg/apis/jenkins.io/v1/types_teams.go ./pkg/apis/jenkins.io/v1/types_workflow.go ./pkg/apis/jenkins.io/v1/types_release.go ./pkg/apis/jenkins.io/v1/types_extensions.go ./pkg/apis/jenkins.io/v1/doc.go ./pkg/apis/jenkins.io/v1/types_environment.go ./pkg/apis/jenkins.io/v1/zz_generated.deepcopy.go ./pkg/apis/jenkins.io/v1/types_fact.go ./pkg/apis/jenkins.io/v1/types_environment_test.go ./pkg/apis/jenkins.io/v1/types_pipeline.go ./pkg/apis/jenkins.io/v1/types_users.go ./pkg/apis/jenkins.io/v1/types_pipeline_scheduler.go ./pkg/apis/jenkins.io/v1/register.go ./pkg/apis/jenkins.io/v1/types_buildpack.go ./pkg/apis/jenkins.io/register.go
+Generating OpenAPI structs for Kubernetes Clients
+./build/codegen --generator-version 36ebc4887cdc openapi --output-package=pkg/client --input-package=github.com/jenkins-x/**-api/pkg/apis --group-with-version=jenkins.io:v1 --version=1.0 --module-name=github.com/jenkins-x/**-api
+installing k8s.io/kube-openapi/cmd/openapi-gen with version 36ebc4887cdc via 'go get' to /tekton/home/.**/codegen/go
+generating Go code to /workspace/go/src/github.com/jenkins-x/**-api in package github.com/jenkins-x/**-api/pkg/client from package github.com/jenkins-x/**-api/pkg/apis
+WARNING: unable to find module requirement version for k8s.io/apimachinery (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [meta:v1] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_meta_v1
+WARNING: unable to find module requirement version for k8s.io/apimachinery (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [resource:] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_resource_unversioned
+WARNING: unable to find module requirement version for k8s.io/apimachinery (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [intstr:] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned
+WARNING: unable to find module requirement version for k8s.io/api (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [batch:v1] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_batch_v1
+WARNING: unable to find module requirement version for k8s.io/api (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [core:v1] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_core_v1
+WARNING: unable to find module requirement version for k8s.io/api (module github.com/jenkins-x/**-api), please add it to your go.mod, for now using HEAD of the master branch
+generating openapi structs for [rbac:v1] at github.com/jenkins-x/**-api/pkg/client/openapi/k8s_io_api_rbac_v1
+generating openapi structs for [jenkins.io:v1] at github.com/jenkins-x/**-api/pkg/client/openapi/core
+generating OpenAPI spec files to /workspace/go/src/github.com/jenkins-x/**-api/docs/apidocs from package /workspace/go/src/github.com/jenkins-x/**-api/github.com/jenkins-x/**-api/pkg/apis
+# sleep for one second to prevent collision with previous codegen's replacement of go.mod
+sleep 1
+Generating Kubernetes Clients for pkg/apis in pkg/client for jenkins.io:v1
+./build/codegen --generator-version kubernetes-1.15.12 clientset --output-package=pkg/client --input-package=pkg/apis --group-with-version=jenkins.io:v1
+installing k8s.io/code-generator/cmd/... version kubernetes-1.15.12 into /tekton/home/.**/codegen/go
+generating Go code to /workspace/go/src/github.com/jenkins-x/**-api in package github.com/jenkins-x/**-api/pkg/client from package github.com/jenkins-x/**-api/pkg/apis
+generating deepcopy structs for [jenkins.io:v1] at github.com/jenkins-x/**-api/pkg/client
+generating clientset structs for [jenkins.io:v1] at github.com/jenkins-x/**-api/pkg/client
+generating listers structs for [jenkins.io:v1] at github.com/jenkins-x/**-api/pkg/client
+generating informers structs for [jenkins.io:v1] at github.com/jenkins-x/**-api/pkg/client
+# sleep for one second to prevent collision with previous codegen's replacement of go.mod
+sleep 1
+./build/codegen --generator-version kubernetes-1.15.12 clientset --generator deepcopy --output-package=pkg --input-package=pkg --group-with-version=config:
+installing k8s.io/code-generator/cmd/... version kubernetes-1.15.12 into /tekton/home/.**/codegen/go
+generating Go code to /workspace/go/src/github.com/jenkins-x/**-api in package github.com/jenkins-x/**-api/pkg from package github.com/jenkins-x/**-api/pkg
+generating deepcopy structs for [config:] at github.com/jenkins-x/**-api/pkg
+make[1]: Entering directory '/workspace/go/src/github.com/jenkins-x/**-api'
+GO111MODULE=off go get golang.org/x/tools/cmd/goimports
+Formatting the imports...
+goimports -w ./cmd/codegen/generator/docs.go ./cmd/codegen/generator/open_api.go ./cmd/codegen/generator/common.go ./cmd/codegen/generator/client_set.go ./cmd/codegen/app/root.go ./cmd/codegen/app/generate_options.go ./cmd/codegen/app/generate_docs.go ./cmd/codegen/app/generate_openapi.go ./cmd/codegen/app/generate_clientset.go ./cmd/codegen/codegen.go ./cmd/codegen/util/strings.go ./cmd/codegen/util/commands.go ./cmd/codegen/util/files.go ./cmd/codegen/util/go.go ./cmd/codegen/util/cli.go ./cmd/codegen/util/go_test.go ./pkg/client/openapi/all/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_api_core_v1/openapi_generated.go ./pkg/client/openapi/k8s_io_api_batch_v1/openapi_generated.go ./pkg/client/openapi/schema_writer_generated.go ./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_meta_v1/openapi_generated.go ./pkg/client/openapi/core/openapi_generated.go ./pkg/client/openapi/k8s_io_api_rbac_v1/openapi_generated.go ./pkg/client/clientset/versioned/clientset.go ./pkg/client/clientset/versioned/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion_test.go ./pkg/client/clientset/version
+ed/typed/jenkins.io/v1/commitstatus_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/testutil.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/generated_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion.go ./pkg/client/clientset/versioned/scheme/doc.go ./pkg/client/clientset/versioned/scheme/register.go ./pkg/client/clientset/versioned/fak
+e/doc.go ./pkg/client/clientset/versioned/fake/clientset_generated.go ./pkg/client/clientset/versioned/fake/register.go ./pkg/client/listers/jenkins.io/v1/team.go ./pkg/client/listers/jenkins.io/v1/environment.go ./pkg/client/listers/jenkins.io/v1/extension.go ./pkg/client/listers/jenkins.io/v1/expansion_generated.go ./pkg/client/listers/jenkins.io/v1/release.go ./pkg/client/listers/jenkins.io/v1/user.go ./pkg/client/listers/jenkins.io/v1/environmentrolebinding.go ./pkg/client/listers/jenkins.io/v1/sourcerepository.go ./pkg/client/listers/jenkins.io/v1/pipelinestructure.go ./pkg/client/listers/jenkins.io/v1/commitstatus.go ./pkg/client/listers/jenkins.io/v1/pipelineactivity.go ./pkg/client/listers/jenkins.io/v1/scheduler.go ./pkg/client/listers/jenkins.io/v1/plugin.go ./pkg/client/listers/jenkins.io/v1/fact.go ./pkg/client/listers/jenkins.io/v1/gitservice.go ./pkg/client/listers/jenkins.io/v1/workflow.go ./pkg/client/listers/jenkins.io/v1/app.go ./pkg/client/listers/jenkins.io/v1/buildpack.go ./pkg/client/listers/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/internalinterfaces/factory_interfaces.go ./pkg/client/informers/externalversions/jenkins.io/v1/team.go ./pkg/client/informers/externalversions/jenkins.io/v1/environment.go ./pkg/client/informers/externalversions/jenkins.io/v1/extension.go ./pkg/client/informers/externalversions/jenkins.io/v1/release.go ./pkg/client/informers/externalversions/jenkins.io/v1/user.go ./pkg/client/informers/externalversions/jenkins.io/v1/environmentrolebinding.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepository.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelinestructure.go ./pkg/client/informers/externalversions/jenkins.io/v1/commitstatus.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelineactivity.go ./pkg/client/informers/externalversions/jenkins.io/v1/scheduler.go ./pkg/client/informers/externalversions/jenkins.io/v1/plugin.go ./pkg/client/informers/externalversions/jenkins.io/v1/fact.go ./pkg/client/informers/externalversions/jenkins.io/v1/gitservice.go ./pkg/client/informers/externalversions/jenkins.io/v1/workflow.go ./pkg/client/informers/externalversions/jenkins.io/v1/app.go ./pkg/client/informers/externalversions/jenkins.io/v1/buildpack.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/jenkins.io/v1/interface.go ./pkg/client/informers/externalversions/jenkins.io/interface.go ./pkg/client/informers/externalversions/generic.go ./pkg/client/informers/externalversions/factory.go ./pkg/cloud/constants.go ./pkg/util/maps.go ./pkg/util/urls_test.go ./pkg/util/validation.go ./pkg/util/dirs.go ./pkg/util/files_test.go ./pkg/util/commands.go ./pkg/util/files.go ./pkg/util/json/patch.go ./pkg/util/json/patch_test.go ./pkg/util/commands_test.go ./pkg/util/urls.go ./pkg/config/doc.go ./pkg/config/install_requirements.go ./pkg/config/install_applications_test.go ./pkg/config/zz_generated.deepcopy.go ./pkg/config/install_applications.go ./pkg/config/install_requirements_test.go ./pkg/apis/jenkins.io/v1/types_pipelinestructure.go ./pkg/apis/jenkins.io/v1/types_teams.go ./pkg/apis/jenkins.io/v1/types_workflow.go ./pkg/apis/jenkins.io/v1/types_release.go ./pkg/apis/jenkins.io/v1/types_extensions.go ./pkg/apis/jenkins.io/v1/doc.go ./pkg/apis/jenkins.io/v1/types_environment.go ./pkg/apis/jenkins.io/v1/zz_generated.deepcopy.go ./pkg/apis/jenkins.io/v1/types_fact.go ./pkg/apis/jenkins.io/v1/types_environment_test.go ./pkg/apis/jenkins.io/v1/types_pipeline.go ./pkg/apis/jenkins.io/v1/types_users.go ./pkg/apis/jenkins.io/v1/types_pipeline_scheduler.go ./pkg/apis/jenkins.io/v1/register.go ./pkg/apis/jenkins.io/v1/types_buildpack.go ./pkg/apis/jenkins.io/register.go
+make[1]: Leaving directory '/workspace/go/src/github.com/jenkins-x/**-api'
+make[1]: Entering directory '/workspace/go/src/github.com/jenkins-x/**-api'
+GO111MODULE=off go get golang.org/x/tools/cmd/goimports
+Formatting the imports...
+goimports -w ./cmd/codegen/generator/docs.go ./cmd/codegen/generator/open_api.go ./cmd/codegen/generator/common.go ./cmd/codegen/generator/client_set.go ./cmd/codegen/app/root.go ./cmd/codegen/app/generate_options.go ./cmd/codegen/app/generate_docs.go ./cmd/codegen/app/generate_openapi.go ./cmd/codegen/app/generate_clientset.go ./cmd/codegen/codegen.go ./cmd/codegen/util/strings.go ./cmd/codegen/util/commands.go ./cmd/codegen/util/files.go ./cmd/codegen/util/go.go ./cmd/codegen/util/cli.go ./cmd/codegen/util/go_test.go ./pkg/client/openapi/all/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_resource_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_api_core_v1/openapi_generated.go ./pkg/client/openapi/k8s_io_api_batch_v1/openapi_generated.go ./pkg/client/openapi/schema_writer_generated.go ./pkg/client/openapi/k8s_io_apimachinery_intstr_unversioned/openapi_generated.go ./pkg/client/openapi/k8s_io_apimachinery_meta_v1/openapi_generated.go ./pkg/client/openapi/core/openapi_generated.go ./pkg/client/openapi/k8s_io_api_rbac_v1/openapi_generated.go ./pkg/client/clientset/versioned/clientset.go ./pkg/client/clientset/versioned/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/release_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelinestructure_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/team_expansion_test.go ./pkg/client/clientset/version
+ed/typed/jenkins.io/v1/commitstatus_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/testutil.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_gitservice.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_commitstatus_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/doc.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_scheduler.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_plugin.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_sourcerepository.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_team_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_fact_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environmentrolebinding.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelineactivity.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_extension_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_release.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_jenkins.io_client.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_workflow.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_environment.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_pipelinestructure_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_app.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/fake/fake_user.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/buildpack.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/workflow_expansion_test.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/generated_expansion.go ./pkg/client/clientset/versioned/typed/jenkins.io/v1/user_expansion.go ./pkg/client/clientset/versioned/scheme/doc.go ./pkg/client/clientset/versioned/scheme/register.go ./pkg/client/clientset/versioned/fak
+e/doc.go ./pkg/client/clientset/versioned/fake/clientset_generated.go ./pkg/client/clientset/versioned/fake/register.go ./pkg/client/listers/jenkins.io/v1/team.go ./pkg/client/listers/jenkins.io/v1/environment.go ./pkg/client/listers/jenkins.io/v1/extension.go ./pkg/client/listers/jenkins.io/v1/expansion_generated.go ./pkg/client/listers/jenkins.io/v1/release.go ./pkg/client/listers/jenkins.io/v1/user.go ./pkg/client/listers/jenkins.io/v1/environmentrolebinding.go ./pkg/client/listers/jenkins.io/v1/sourcerepository.go ./pkg/client/listers/jenkins.io/v1/pipelinestructure.go ./pkg/client/listers/jenkins.io/v1/commitstatus.go ./pkg/client/listers/jenkins.io/v1/pipelineactivity.go ./pkg/client/listers/jenkins.io/v1/scheduler.go ./pkg/client/listers/jenkins.io/v1/plugin.go ./pkg/client/listers/jenkins.io/v1/fact.go ./pkg/client/listers/jenkins.io/v1/gitservice.go ./pkg/client/listers/jenkins.io/v1/workflow.go ./pkg/client/listers/jenkins.io/v1/app.go ./pkg/client/listers/jenkins.io/v1/buildpack.go ./pkg/client/listers/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/internalinterfaces/factory_interfaces.go ./pkg/client/informers/externalversions/jenkins.io/v1/team.go ./pkg/client/informers/externalversions/jenkins.io/v1/environment.go ./pkg/client/informers/externalversions/jenkins.io/v1/extension.go ./pkg/client/informers/externalversions/jenkins.io/v1/release.go ./pkg/client/informers/externalversions/jenkins.io/v1/user.go ./pkg/client/informers/externalversions/jenkins.io/v1/environmentrolebinding.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepository.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelinestructure.go ./pkg/client/informers/externalversions/jenkins.io/v1/commitstatus.go ./pkg/client/informers/externalversions/jenkins.io/v1/pipelineactivity.go ./pkg/client/informers/externalversions/jenkins.io/v1/scheduler.go ./pkg/client/informers/externalversions/jenkins.io/v1/plugin.go ./pkg/client/informers/externalversions/jenkins.io/v1/fact.go ./pkg/client/informers/externalversions/jenkins.io/v1/gitservice.go ./pkg/client/informers/externalversions/jenkins.io/v1/workflow.go ./pkg/client/informers/externalversions/jenkins.io/v1/app.go ./pkg/client/informers/externalversions/jenkins.io/v1/buildpack.go ./pkg/client/informers/externalversions/jenkins.io/v1/sourcerepositorygroup.go ./pkg/client/informers/externalversions/jenkins.io/v1/interface.go ./pkg/client/informers/externalversions/jenkins.io/interface.go ./pkg/client/informers/externalversions/generic.go ./pkg/client/informers/externalversions/factory.go ./pkg/cloud/constants.go ./pkg/util/maps.go ./pkg/util/urls_test.go ./pkg/util/validation.go ./pkg/util/dirs.go ./pkg/util/files_test.go ./pkg/util/commands.go ./pkg/util/files.go ./pkg/util/json/patch.go ./pkg/util/json/patch_test.go ./pkg/util/commands_test.go ./pkg/util/urls.go ./pkg/config/doc.go ./pkg/config/install_requirements.go ./pkg/config/install_applications_test.go ./pkg/config/zz_generated.deepcopy.go ./pkg/config/install_applications.go ./pkg/config/install_requirements_test.go ./pkg/apis/jenkins.io/v1/types_pipelinestructure.go ./pkg/apis/jenkins.io/v1/types_teams.go ./pkg/apis/jenkins.io/v1/types_workflow.go ./pkg/apis/jenkins.io/v1/types_release.go ./pkg/apis/jenkins.io/v1/types_extensions.go ./pkg/apis/jenkins.io/v1/doc.go ./pkg/apis/jenkins.io/v1/types_environment.go ./pkg/apis/jenkins.io/v1/zz_generated.deepcopy.go ./pkg/apis/jenkins.io/v1/types_fact.go ./pkg/apis/jenkins.io/v1/types_environment_test.go ./pkg/apis/jenkins.io/v1/types_pipeline.go ./pkg/apis/jenkins.io/v1/types_users.go ./pkg/apis/jenkins.io/v1/types_pipeline_scheduler.go ./pkg/apis/jenkins.io/v1/register.go ./pkg/apis/jenkins.io/v1/types_buildpack.go ./pkg/apis/jenkins.io/register.go
+make[1]: Leaving directory '/workspace/go/src/github.com/jenkins-x/**-api'
+Generation complete
+Code generation is out of date
+pkg/config/zz_generated.deepcopy.go
+diff --git a/pkg/config/zz_generated.deepcopy.go b/pkg/config/zz_generated.deepcopy.go
+index a5b1727..c3a0e4f 100644
+--- a/pkg/config/zz_generated.deepcopy.go
++++ b/pkg/config/zz_generated.deepcopy.go
+@@ -388,6 +388,22 @@ func (in *VaultAWSUnsealConfig) DeepCopy() *VaultAWSUnsealConfig {
+ 	return out
+ }
+ 
++// DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
++func (in *VaultAzureConfig) DeepCopyInto(out *VaultAzureConfig) {
++	*out = *in
++	return
++}
++
++// DeepCopy is an autogenerated deepcopy function, copying the receiver, creating a new VaultAzureConfig.
++func (in *VaultAzureConfig) DeepCopy() *VaultAzureConfig {
++	if in == nil {
++		return nil
++	}
++	out := new(VaultAzureConfig)
++	in.DeepCopyInto(out)
++	return out
++}
++
+ // DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
+ func (in *VaultConfig) DeepCopyInto(out *VaultConfig) {
+ 	*out = *in
+@@ -396,6 +412,11 @@ func (in *VaultConfig) DeepCopyInto(out *VaultConfig) {
+ 		*out = new(VaultAWSConfig)
+ 		**out = **in
+ 	}
++	if in.AzureConfig != nil {
++		in, out := &in.AzureConfig, &out.AzureConfig
++		*out = new(VaultAzureConfig)
++		**out = **in
++	}
+ 	return
+ }
+ 
+make: *** [Makefile.codegen:85: verify-generation-complete] Error 1
+[0;31mFAILED[0m make verify-generation-complete
+RUN make generate-docs
+Generating HTML docs for Kubernetes Clients
+./build/codegen --generator-version v0.0.0-20190912061656-a61bc210ee54 docs
+generating docs to /workspace/go/src/github.com/jenkins-x/**-api/docs/apidocs
+installing github.com/kubernetes-incubator/reference-docs in version v0.0.0-20190912061656-a61bc210ee54 via 'go get'
+installing github.com/kubernetes-incubator/reference-docs/gen-apidocs in version v0.0.0-20190912061656-a61bc210ee54 via 'go get'
+copying static files from /tekton/home/.**/codegen/go/pkg/mod/github.com/kubernetes-incubator/reference-docs@v0.0.0-20190912061656-a61bc210ee54/gen-apidocs/generators/static to /workspace/go/src/github.com/jenkins-x/**-api/docs/apidocs/static
+[0;32mPASSED[0m make generate-docs
+[31m
+Pipeline failed on stage 'ci' : container 'step-verify-codegen'. The execution of the pipeline has stopped.[0m
